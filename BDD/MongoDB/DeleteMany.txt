@@ -1,0 +1,29 @@
+-- Supprime le badge contenant l'_id 7be719dd-5831-4c1a-970f-654a34cc8a15 dans tous les roles existants
+-- Fonctionne uniquement sur des "Array"
+	
+db.Role.update(
+{}, 
+{ $pull: { badges: { _uuid: "7be719dd-5831-4c1a-970f-654a34cc8a15"} } }, 
+{ multi: true });
+
+
+-- Supprime tous les utilisateurs où l'authentification est paramétrée en LDAP
+
+try {
+   db.User.deleteMany( { "authentication" : "ldap" } );
+} catch (e) {
+   print (e);
+}
+
+
+-- Supprime tous les utilisateurs n'appartenant pas à Sage
+
+try {
+   db.User.deleteMany( { "_factoryOwner" : { $ne : "SAGE" } } );
+} catch (e) {
+   print (e);
+}
+
+-- Supprime une collection entièrement
+
+db.CaCertificate.drop()

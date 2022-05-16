@@ -1,0 +1,32 @@
+
+{
+	"solution": {
+		"name": "X3U12TEST",
+		"mainPort": 1803
+	},
+	"application": {
+		"server": "cl6243-vm01",
+		"mainPort": 80
+	},
+	"runtimes": [
+		{
+			"name": "X3U12TEST",
+			"server": "cl6243-vm01",
+			"mainPort": 1803 
+		}
+	],
+	"database": {
+		"name": "X3U12TEST",
+		"server": "cl6243-vm01",
+		"type": "SQLSERVER"
+	},
+	"reports": [
+	
+		{
+			"name": "EDTSRV",
+			"server": "cl6243-vm01",
+			"mainPort": 1890,
+			"path": "f:\\Sage\\SafeX3\\EDTV2\\EDTSRV\\srvedit"
+		}
+	]
+}

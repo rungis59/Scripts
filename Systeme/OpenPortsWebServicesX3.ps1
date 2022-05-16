@@ -1,0 +1,1 @@
+New-NetFirewallRule -DisplayName 'Sage X3' -Direction Inbound -Action Allow -Protocol TCP -LocalPort @('28880', '15003', '28940', '28980', '28943', '28960', '28920', '28843', '28023')

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="fra">
+<com.izforge.izpack.panels.HelloPanel id="UNKNOWN (com.izforge.izpack.panels.HelloPanel)"/>
+<com.izforge.izpack.panels.HTMLLicencePanel id="UNKNOWN (com.izforge.izpack.panels.HTMLLicencePanel)"/>
+<com.izforge.izpack.panels.LicencePanel id="UNKNOWN (com.izforge.izpack.panels.LicencePanel)"/>
+<com.izforge.izpack.panels.InstallationTypePanel id="UNKNOWN (com.izforge.izpack.panels.InstallationTypePanel)">
+<MODIFY.IZPACK.INSTALL>false</MODIFY.IZPACK.INSTALL>
+</com.izforge.izpack.panels.InstallationTypePanel>
+<com.izforge.izpack.panels.InstallTypePanel id="UNKNOWN (com.izforge.izpack.panels.InstallTypePanel)">
+<MODIFY.IZPACK.INSTALL>false</MODIFY.IZPACK.INSTALL>
+<installpath>C:\Sage\SyracuseComponent</installpath>
+</com.izforge.izpack.panels.InstallTypePanel>
+<com.izforge.izpack.panels.TargetPanel id="UNKNOWN (com.izforge.izpack.panels.TargetPanel)">
+<installpath>C:\Sage\SyracuseComponent</installpath>
+</com.izforge.izpack.panels.TargetPanel>
+<com.izforge.izpack.panels.PacksPanel id="UNKNOWN (com.izforge.izpack.panels.PacksPanel)">
+<pack index="0" name="Syracuse Base files" selected="true"/>
+<pack index="1" name="Syracuse Configuration files" selected="true"/>
+<pack index="2" name="Syracuse Windows Control files" selected="true"/>
+<pack index="3" name="Syracuse Documentation files" selected="false"/>
+</com.izforge.izpack.panels.PacksPanel>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.0">
+<userInput>
+<entry key="syracuse.service.webnumber" value="2"/>
+<entry key="syracuse.winservice.username" value="test"/>
+<entry key="syracuse.service.procnumber" value="2"/>
+<entry key="component.node.name" value="NODE0"/>
+<entry key="syracuse.service.port" value="8124"/>
+<entry key="syracuse.service.licencepath" value="C:\Users\Administrateur.KARDOL\Desktop\sage.json"/>
+<entry key="syracuse.dir.logpath" value="C:\Sage\SyracuseComponent\syracuse\logs"/>
+<entry key="syracuse.winservice.password" value="Kardol69"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.1">
+<userInput>
+<entry key="syracuse.dir.certs" value="C:\Sage\SyracuseComponent\syracuse\certs"/>
+<entry key="syracuse.certificate.install" value="false"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.2">
+<userInput/>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.3">
+<userInput/>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.4">
+<userInput/>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.5">
+<userInput>
+<entry key="syracuse.ssl.pemkeyfile" value="C:\Users\Administrateur.KARDOL\Desktop\cert\oracle-v11.key"/>
+<entry key="syracuse.ssl.pemcafile" value="C:\Users\Administrateur.KARDOL\Desktop\cert\ca.cacrt"/>
+<entry key="syracuse.certificate.setx3runtime" value="false"/>
+<entry key="syracuse.ssl.pemkeypassword" value="S@geX3"/>
+<entry key="syracuse.certificate.setx3webserver" value="false"/>
+<entry key="syracuse.ssl.certfile" value="C:\Users\Administrateur.KARDOL\Desktop\cert\oracle-v11.crt"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.6">
+<userInput>
+<entry key="mongodb.service.install" value="false"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.7">
+<userInput>
+<entry key="mongodb.service.hostname" value="oracle-v11"/>
+<entry key="mongodb.ssl.enable" value="false"/>
+<entry key="mongodb.service.port" value="27017"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.LicenceParamPanel id="UNKNOWN (com.izforge.izpack.panels.LicenceParamPanel)"/>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.8">
+<userInput/>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.9">
+<userInput>
+<entry key="elasticsearch.url.hostname" value="oracle-v11"/>
+<entry key="elasticsearch.service.httpport" value="9200"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.SummaryPanel id="UNKNOWN (com.izforge.izpack.panels.SummaryPanel)"/>
+<com.izforge.izpack.panels.InstallPanel id="UNKNOWN (com.izforge.izpack.panels.InstallPanel)"/>
+<com.izforge.izpack.panels.ProcessPanel id="UNKNOWN (com.izforge.izpack.panels.ProcessPanel)"/>
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.10">
+<userInput/>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.ShortcutPanel id="UNKNOWN (com.izforge.izpack.panels.ShortcutPanel)">
+<programGroup name="Sage Syracuse/Sage EM Syracuse Server - NODE0"/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="This starts Gui to monitor Syracuse service" encoding="" group="true" icon="" iconIndex="0" initialState="1" mimetype="" name="Moniteur du service Syracuse" target="C:\Sage\SyracuseComponent\syracuse\monitorservice.cmd" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="This starts Syracuse in a console" encoding="" group="true" icon="" iconIndex="0" initialState="1" mimetype="" name="Démarre Syracuse dans une fenêtre de commandes" target="C:\Sage\SyracuseComponent\syracuse\manual-start.cmd" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="This starts the Syracuse service" encoding="" group="true" icon="" iconIndex="0" initialState="1" mimetype="" name="Démarre Syracuse en tant que service" target="C:\Sage\SyracuseComponent\syracuse\servicestart.cmd" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="This stop the Syracuse service" encoding="" group="true" icon="" iconIndex="0" initialState="1" mimetype="" name="Arrête le service Syracuse" target="C:\Sage\SyracuseComponent\syracuse\servicestop.cmd" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+</com.izforge.izpack.panels.ShortcutPanel>
+<com.izforge.izpack.panels.FinishPanel id="UNKNOWN (com.izforge.izpack.panels.FinishPanel)"/>
+</AutomatedInstallation>

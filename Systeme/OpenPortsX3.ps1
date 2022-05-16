@@ -1,0 +1,2 @@
+New-NetFirewallRule -DisplayName 'Sage X3' -Direction Inbound -Action Allow -Protocol TCP -LocalPort @('80', '1818', '1890', '8127', '1801', '1802', '1803', '1521', '27017', '9300', '9200', '8124', '1433', '1434')
+New-NetFirewallRule -DisplayName 'SQL' -Direction Inbound -Action Allow -Protocol UDP -LocalPort @('1434')

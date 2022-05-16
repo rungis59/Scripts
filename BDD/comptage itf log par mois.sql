@@ -1,0 +1,1 @@
+select to_char(dat_log,'YYYY/MM'), count(*) from itf_logs group by to_char(dat_log,'YYYY/MM') order by to_char(dat_log,'YYYY/MM');

@@ -1,0 +1,1 @@
+Invoke-command -ComputerName "cl6182-vm7-rds4" -filepath "C:\Users\Administrateur.001\Downloads\Remove_duplicated_firewall_rules.ps1"  -AsJob

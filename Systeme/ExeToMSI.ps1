@@ -1,0 +1,1 @@
+./SyracuseOfficeAddinsSetup.EXE /s /x /b"C:\temp" /v"/qn"

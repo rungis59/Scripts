@@ -1,0 +1,1 @@
+Export-WindowsDriver -Online -Destination D:\Drivers | where 'ClassName' -eq Printer

@@ -1,0 +1,19 @@
+New-VICredentialStoreItem -Host 192.168.255.6 -User administrator@vsphere.local -Password ZW29d4fuM@
+
+Get-VICredentialStoreItem -User administrator@vsphere.local -Host 192.168.255.6
+
+connect-viserver -server 192.168.255.6
+
+Get-VM | Format-Table Name, @{Label="NumSnapshots";Expression={(Get-Snapshot -VM $_ | Measure-Object).Count}}, @{Label="TotalSnapShotSizeMB";Expression={(Get-Snapshot -VM $_ | Measure-Object -Sum SizeMB).Sum}} > snapshot.txt
+
+$Report = Get-VM | Get-Snapshot | Select VM,Name,@{Label="Size";Expression={"{0:N2} GB" -f ($_.SizeGB)}},Created
+If (-not $Report)
+{  $Report = New-Object PSObject -Property @{
+      VM = "No snapshots found on any VM's controlled by $VIServer"
+      Name = ""
+      Description = ""
+      Size = ""
+      Created = ""
+   }
+}
+$Report | Select VM,Name,Size,Created >> snapshot.txt

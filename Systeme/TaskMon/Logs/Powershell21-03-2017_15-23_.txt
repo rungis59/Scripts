@@ -1,0 +1,24 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20170321152300
+Username: AUTOTRANS\administrateur
+RunAs User: AUTOTRANS\administrateur
+Machine: AUT-SRV-DB2008 (Microsoft Windows NT 6.1.7601 Service Pack 1)
+Host Application: powershell .\Task-Monitor.ps1
+Process ID: 2112
+PSVersion: 5.0.10586.117
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0.10586.117
+BuildVersion: 10.0.10586.117
+CLRVersion: 4.0.30319.36373
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\Logs\Powershell21-03-2017_15-23_.txt
+task Intégration GVH failed in last hour for server 127.0.0.1
+
+Task failed at-127.0.0.1-Task Name-Intégration GVH-Last Run on 03/21/2017 15:24:00
+**********************
+Windows PowerShell transcript end
+End time: 20170321152400
+**********************

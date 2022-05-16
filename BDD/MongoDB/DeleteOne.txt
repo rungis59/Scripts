@@ -1,0 +1,6 @@
+-- Exemple de delete d'un badge dans le role ERP-ARACCMAN
+-- Fonctionne uniquement sur des "Array"
+	
+db.Role.update(
+{"code":"ERP-ARACCMAN"}, 
+{ $pull: { badges: { _uuid: "c482c375-47db-407a-9cb2-e7e6c8f6f372"} } }, false, true);

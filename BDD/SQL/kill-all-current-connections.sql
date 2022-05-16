@@ -1,0 +1,6 @@
+use master
+ALTER DATABASE YourDatabase SET SINGLE_USER WITH ROLLBACK IMMEDIATE 
+
+--do you stuff here 
+
+ALTER DATABASE YourDatabase SET MULTI_USER

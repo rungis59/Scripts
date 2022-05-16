@@ -1,0 +1,1 @@
+runas /noprofile /user:autotrans.fr\administrateur "mmc C:\WINDOWS\system32\dfrg.msc"

@@ -1,0 +1,8 @@
+DECLARE @Rows INT
+SET @Rows = 1
+
+WHILE (@Rows > 0)
+BEGIN
+    DELETE TOP (1000) FROM [SEED].[ATEXTE5]
+    SET @Rows = @@ROWCOUNT
+END

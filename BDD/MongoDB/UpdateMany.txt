@@ -1,0 +1,13 @@
+-- Je cherche toutes les entrées de menu ayant comme point de connexion fe8 ....
+db.getCollection('MenuItem').find({
+    "endpoint._uuid" : "fe8f57b4-502a-4a1d-abd9-bf110c27e8a2"
+    })
+	
+	
+-- Et j'update toutes ces entrées de menu en mettant à blanc les points de connexion
+	
+db.MenuItem.updateMany( 
+    { "endpoint._uuid" : "fe8f57b4-502a-4a1d-abd9-bf110c27e8a2" }, 
+    { $set: { "endpoint" : ""}
+  } 
+)

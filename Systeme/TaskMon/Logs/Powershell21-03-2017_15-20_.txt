@@ -1,0 +1,39 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20170321152019
+Username: AUTOTRANS\administrateur
+RunAs User: AUTOTRANS\administrateur
+Machine: AUT-SRV-DB2008 (Microsoft Windows NT 6.1.7601 Service Pack 1)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe C:\TaskMon\Task-Monitor.ps1
+Process ID: 3964
+PSVersion: 5.0.10586.117
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0.10586.117
+BuildVersion: 10.0.10586.117
+CLRVersion: 4.0.30319.36373
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\Logs\Powershell21-03-2017_15-20_.txt
+PS>TerminatingError(Out-File): "Impossible de trouver une partie du chemin d'accès 'C:\TaskMon\TaskMon\Failed.txt'."
+Out-File : Impossible de trouver une partie du chemin d'accès 'C:\TaskMon\TaskMon\Failed.txt'.
+At C:\TaskMon\Task-Monitor.ps1:87 char:81
++ ... AutoSize  | Out-File -FilePath "C:\TaskMon\TaskMon\Failed.txt"  -Widt ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], DirectoryNotFoundException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+Out-File : Impossible de trouver une partie du chemin d'accès 'C:\TaskMon\TaskMon\Failed.txt'.
+At C:\TaskMon\Task-Monitor.ps1:87 char:81
++ ... AutoSize  | Out-File -FilePath "C:\TaskMon\TaskMon\Failed.txt"  -Widt ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], DirectoryNotFoundException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+
+task Intégration GVH failed in last hour for server 127.0.0.1
+Task failed at-127.0.0.1-Task Name-Intégration GVH-Last Run on 03/21/2017 15:20:01
+Task failed at-127.0.0.1-Task Name-Intégration GVH-Last Run on 03/21/2017 15:20:01
+email already sent for Task failed at-127.0.0.1-Task Name-Intégration GVH-Last Run on 03/21/2017 15:20:01
+**********************
+Windows PowerShell transcript end
+End time: 20170321152019
+**********************

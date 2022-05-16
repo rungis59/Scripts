@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="fra">
+<com.izforge.izpack.panels.HelloPanel id="UNKNOWN (com.izforge.izpack.panels.HelloPanel)"/>
+<com.izforge.izpack.panels.HTMLLicencePanel id="UNKNOWN (com.izforge.izpack.panels.HTMLLicencePanel)"/>
+<com.izforge.izpack.panels.LicencePanel id="UNKNOWN (com.izforge.izpack.panels.LicencePanel)"/>
+<com.izforge.izpack.panels.InstallationTypePanel id="UNKNOWN (com.izforge.izpack.panels.InstallationTypePanel)">
+<MODIFY.IZPACK.INSTALL>false</MODIFY.IZPACK.INSTALL>
+</com.izforge.izpack.panels.InstallationTypePanel>
+<com.izforge.izpack.panels.InstallTypePanel id="UNKNOWN (com.izforge.izpack.panels.InstallTypePanel)">
+<MODIFY.IZPACK.INSTALL>false</MODIFY.IZPACK.INSTALL>
+<installpath>E:\Sage\Documentation\DOC</installpath>
+</com.izforge.izpack.panels.InstallTypePanel>
+<com.izforge.izpack.panels.UserInputPanel id="UNKNOWN (com.izforge.izpack.panels.UserInputPanel)">
+<userInput>
+<entry key="component.node.name" value="DOC"/>
+<entry key="documentation.service.port" value="8127"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.TargetPanel id="UNKNOWN (com.izforge.izpack.panels.TargetPanel)">
+<installpath>E:\Sage\Documentation\DOC</installpath>
+</com.izforge.izpack.panels.TargetPanel>
+<com.izforge.izpack.panels.PacksPanel id="UNKNOWN (com.izforge.izpack.panels.PacksPanel)">
+<pack index="0" name="Sage Syracuse documentation files" selected="true"/>
+<pack index="1" name="Sage Syracuse documentation Server" selected="true"/>
+<pack index="2" name="Sage Syracuse documentation files for windows" selected="true"/>
+</com.izforge.izpack.panels.PacksPanel>
+<com.izforge.izpack.panels.SummaryPanel id="UNKNOWN (com.izforge.izpack.panels.SummaryPanel)"/>
+<com.izforge.izpack.panels.InstallPanel id="UNKNOWN (com.izforge.izpack.panels.InstallPanel)"/>
+<com.izforge.izpack.panels.ProcessPanel id="UNKNOWN (com.izforge.izpack.panels.ProcessPanel)"/>
+<com.izforge.izpack.panels.FinishPanel id="UNKNOWN (com.izforge.izpack.panels.FinishPanel)"/>
+</AutomatedInstallation>

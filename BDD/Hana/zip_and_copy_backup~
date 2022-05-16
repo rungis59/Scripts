@@ -1,0 +1,5 @@
+cd /hana/data/shared/backup_service/backups/10.199.194.209_30015/NDB/SUNTEC
+zip -r "backup_SUNTEC-$(date +"%Y-%m-%d").zip" ./* -x "./bck_actual/*"
+cp ./*.zip /hana/log/backup
+rm ./*
+find /hana/log/backup/* -mtime +5 -exec rm {} \;

@@ -1,0 +1,3 @@
+SW_DVD9_NTRL_SQL_Svr_Standard_Edtn_2017_64Bit_French_OEM_VL_X21-56948.ISO
+SSMS-Setup.exe
+SQLServer2017-CU18-KB4527377-x64.exe

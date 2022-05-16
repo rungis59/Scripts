@@ -1,0 +1,2 @@
+New-NetFirewallRule -DisplayName 'VeeamUDP' -Direction Inbound -Action Allow -Protocol UDP -Profile Domain -LocalPort @('135', '137-139', '445')
+New-NetFirewallRule -DisplayName 'VeeamTCP' -Direction Inbound -Action Allow -Protocol TCP -Profile Domain -LocalPort @('135', '137-139', '445')

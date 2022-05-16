@@ -1,0 +1,1 @@
+ren "C:\Users\%username%\AppData\Roaming\Microsoft\Outlook\outlook.nk2" cyres.nk2

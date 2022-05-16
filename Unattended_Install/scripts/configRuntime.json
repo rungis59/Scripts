@@ -1,0 +1,56 @@
+{
+	"allowConsole" : false,
+	"sandbox":
+	{
+		"directories": [
+		{
+			"path": "e:\\Sage\\X3U12TEST\\runtime\\cfg",
+			"extensions": ["json"]
+		},
+		{
+			"path": "e:\\Sage\\X3U12TEST\\runtime\\sem",
+			"writable": true,
+			"extensions": ["map", "dat"]
+		},
+		{
+			"path": "f:\\Sage\\X3U12TEST\\database\\trace",
+			"writable": true,
+			"extensions": ["*"]
+		},
+		{
+			"path": "e:\\Sage\\X3U12TEST\\runtime",
+			"volume": "0",
+			"writable": true,
+			"extensions": ["*"]
+		},
+		{
+			"path": "f:\\Sage\\X3U12TEST\\dossiers",
+			"writable": true,
+			"volume": "A",
+			"extensions": ["*"]
+		},
+		{
+			"path": "f:\\Sage\\X3U12TEST\\dossiers",
+			"pattern":[
+				"^[A-Z1-9]*/TRT/[YZ][A-Z1-9_]*\\.src$",
+				"^[A-Z1-9]*/TRT/(SPE|SPV|SUBY|SUBZ|CNSY|CNSZ)[A-Z1-9_]*\\.src$",
+				"^[A-Z1-9]*/TRT/[A-Z1-9_]*(_CSPE|_CSPV|_CVER)\\.src$",
+				"^[A-Z1-9]*/TRT/CNS[A-Z1-9_]*SPE\\.src$",
+				"^[A-Z1-9]*/STC/(C_Y|C_Z|R_Y|R_Z)[A-Z1-9_]*\\.stc$"
+			],
+			"writable": true,
+			"secured": true        
+		},
+		{
+			"path": "e:\\Sage\\X3U12TEST\\runtime\\tmp",
+			"writable": true,
+			"extensions": ["*"]
+		}]
+		,
+		"spawn": [
+				{ 
+					"pattern":".*",
+					"path":"*"
+		}]					
+	}
+}

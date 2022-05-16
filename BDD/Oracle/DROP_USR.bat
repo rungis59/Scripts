@@ -1,0 +1,1 @@
+sqlplus system/manager2@PTD @Pre_import_PTDE.sql

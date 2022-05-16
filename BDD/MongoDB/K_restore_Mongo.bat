@@ -1,0 +1,1 @@
+mongorestore.exe --port 27017 --db syracuse --drop "E:\Sage\SafeX3\MongoDB_Entreprise_for_Sage_Syracuse\data\syracuse"

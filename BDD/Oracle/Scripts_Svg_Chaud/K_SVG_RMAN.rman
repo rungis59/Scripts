@@ -1,0 +1,73 @@
+## **********************************************************************************
+## *         SCRIPT DE SAUVEGARDE A CHAUD - CONFIGURATION ET EXECUTION RMAN         *
+## **********************************************************************************
+## JG - 04/12/2014 - Création du script RMAN
+
+## A minima : pour le bon fonctionnement du script il est nécessaire de changer le chemin de dépose de la sauvegarde L39, L40, L59 et L69
+
+
+# Choix du niveau de compression [BASIC | NONE | LOW | MEDIUM | HIGH] 
+# 		Utiliser LOW pour avoir le meilleur ratio performance/compression
+# VERSION ORACLE 11G
+CONFIGURE COMPRESSION ALGORITHM 'BASIC';
+# VERSION ORACLE 10G, cette variable n'est pas connu. Ne rien mettre. La compression à tout de même lieu
+
+# Nombre de rétention de backups
+#	Si égal à 1 : Aucune rétention n'est possible l'ancien fichier de sauvegarde est supprimé et plus d'Archivelogs
+#	Si supérieur à 1 : Conservation des AR et du BackupSet pour 1 jour ou plus
+CONFIGURE RETENTION POLICY TO REDUNDANCY 3;
+
+#Choix du support de sauvegarde - DISK dans notre cas
+CONFIGURE DEFAULT DEVICE TYPE TO DISK;
+
+# Nombre de jobs simultanés : nécessite une version ENTREPRISE d'Oracle pour avoir PARALLELISM supérieur à 1
+CONFIGURE DEVICE TYPE DISK BACKUP TYPE TO BACKUPSET PARALLELISM 1;
+
+# RMAN ne sauvegarde pas les Datafiles déjà sauvegardé si OPTIMIZATION = ON
+CONFIGURE BACKUP OPTIMIZATION OFF;
+
+# Destination des fichiers de sauvegarde RMAN pour les datas, les archivelogs et les contrôles files.
+# /!\ Changer les chemins en laissant les %F et %U /!\
+# %F - Combines the DBID, day, month, year, and sequence into a unique and repeatable generated name
+# %U - A system-generated unique filename (default). %U is different for image copies and backup pieces. 
+#		For a backup piece, %U is a shorthand for %u_%p_%c and guarantees uniqueness in generated backup filenames
+# 		For an image copy of a datafile, %U means the following : data-D-%d_id-%I_TS-%N_FNO-%f_%u
+#		For an image copy of an archived redo log, %U means the following : arch-D_%d-id-%I_S-%e_T-%h_A-%a_%u
+#		MAXPIECESIZE 	: Configuration de la taille maximal d'un fichier backup avant d'en créer un autre
+#		MAXSETSIZE 		: Nombre maximum de fichier pour 1 backupset
+CONFIGURE CONTROLFILE AUTOBACKUP ON;
+CONFIGURE CONTROLFILE AUTOBACKUP FORMAT FOR DEVICE TYPE DISK TO 'F:\Backupdirectory\X160\BackupBDD\%F';
+CONFIGURE CHANNEL DEVICE TYPE DISK FORMAT 'F:\Backupdirectory\X160\BackupBDD\%U' MAXPIECESIZE 5G;
+CONFIGURE DATAFILE BACKUP COPIES FOR DEVICE TYPE DISK TO 1;
+CONFIGURE ARCHIVELOG BACKUP COPIES FOR DEVICE TYPE DISK TO 1;
+CONFIGURE MAXSETSIZE TO UNLIMITED;
+
+# Configuration de la rétention des archivelogs après sauvegarde - Conservation pendant 3 sauvegardes valide sur disque
+# CONFIGURE ARCHIVELOG DELETION POLICY TO BACKED UP 3 TIMES TO DISK;
+# Dans un contexte de Standby Database :
+# CONFIGURE ARCHIVELOG DELETION POLICY TO APPLIED ON ALL STANDBY BACKED UP 3 TIMES TO DISK;
+CONFIGURE ARCHIVELOG DELETION POLICY CLEAR;
+
+# Vérification de l'état des archivelogs avant la sauvegarde
+CROSSCHECK ARCHIVELOG ALL;
+
+# Dépose du dernier redolog avant la sauvegarde dans le répertoire des archivelogs
+SQL "Alter System Archive Log Current";
+
+# Réalisation de la sauvegarde
+# /!\ Faire attention au chemin de la sauvegarde
+BACKUP AS COMPRESSED BACKUPSET DATABASE FORMAT 'F:\Backupdirectory\X160\BackupBDD\%d_DATABASE_%p_%s.dmp' tag='inc_daily' PLUS ARCHIVELOG FORMAT 'F:\Backupdirectory\X160\BackupBDD\%d_ARCHIVELOGS_%p_%s.dmp' tag='inc_daily';
+
+# Dépose du dernier redolog après la sauvegarde dans le répertoire des archivelogs
+SQL "Alter System Archive Log Current";
+
+# Suppression des backups supérieur à RETENTION POLICY TO REDUNDANCY, une fois la dernière sauvegarde valide
+DELETE NOPROMPT OBSOLETE;
+
+# Copie du controlfile après la sauvegarde dans le répertoire de BackupDirectory
+# /!\ Faire attention au chemin de la sauvegarde
+COPY CURRENT CONTROLFILE TO 'F:\Backupdirectory\X160\BackupBDD\controlfile.ctl';
+
+## **********************************************************************************
+## *     FIN DU SCRIPT DE SAUVEGARDE A CHAUD - CONFIGURATION ET EXECUTION RMAN      *
+## **********************************************************************************

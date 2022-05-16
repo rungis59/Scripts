@@ -1,0 +1,1 @@
+imp sa/manager@qual.autotrans.fr file=d:\ora_bkp\qualios.dmp fromuser=sa touser=sa log=d:\ora_bkp\qualios.log commit=y grants=n

@@ -1,0 +1,1 @@
+﻿Get-ADUser -Filter 'Name -like "*"' -SearchBase 'OU=FR,OU=Users,OU=Suntec,DC=suntec,DC=sap1' -property SamAccountName | % {Set-ADUser $_ -changepasswordatlogon $true}

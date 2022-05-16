@@ -1,0 +1,1 @@
+C:\Windows\System32\runas.exe /env /noprofile /user:administrateur@autotrans.fr "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -command \"start-process powershell -verb RunAs\""

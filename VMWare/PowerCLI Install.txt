@@ -1,0 +1,39 @@
+Set-ItemProperty -Path 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\.NetFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Value '1' -Type DWord
+Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\.NetFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Value '1' -Type DWord
+
+## restart PowerShell
+Install-Module PowershellGet -Force 
+
+## Si proxy en place:
+
+	# you need to configure your default proxy settings in your powershell profile. Start powershell and run the following:
+
+	notepad $PROFILE
+
+	# This will start notepad and open your powershell profile. If the file doesn’t exist, Notepad will prompt you to create it.
+
+	# Add these lines to the profile script:
+
+	[system.net.webrequest]::defaultwebproxy = new-object system.net.webproxy('http://YourProxyHostNameGoesHere:ProxyPortGoesHere')
+	[system.net.webrequest]::defaultwebproxy.credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials
+	[system.net.webrequest]::defaultwebproxy.BypassProxyOnLocal = $true
+
+	# Save, close and restart powershell (or execute the profile script with iex $PROFILE).
+
+	# Now, you can register the default PsRepository with this command:
+
+	Register-PSRepository -Default
+
+	# If you query the registered repositories, you will now see the default PsRepository:
+
+	Get-PSRepository
+ 
+	Name                      InstallationPolicy   SourceLocation
+	----                      ------------------   --------------
+	PSGallery                 Untrusted            https://www.powershellgallery.com/api/v2/
+
+
+
+Install-Module -Name VMware.PowerCLI –AllowClobber
+Set-ExecutionPolicy -ExecutionPolicy UNRESTRICTED
+Set-PowerCLIConfiguration -InvalidCertificateAction Ignore

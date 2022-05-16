@@ -1,0 +1,1 @@
+exp ptd/snartotua@PTDE file=d:\ora_bkp\attsavre7.dmp owner=ptd log=d:\ora_bkp\attsavre7.log

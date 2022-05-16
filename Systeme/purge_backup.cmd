@@ -1,0 +1,1 @@
+forfiles -p "D:\SQLBACKUP" -m *.* -c "cmd /c echo del \"@FILE\" & del \"@FILE\"" -d -7

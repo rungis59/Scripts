@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="fra">
+<com.izforge.izpack.panels.CheckedHelloPanel id="UNKNOWN (com.izforge.izpack.panels.CheckedHelloPanel)"/>
+<com.izforge.izpack.panels.HTMLLicencePanel id="UNKNOWN (com.izforge.izpack.panels.HTMLLicencePanel)"/>
+<com.izforge.izpack.panels.LicencePanel id="UNKNOWN (com.izforge.izpack.panels.LicencePanel)"/>
+<com.izforge.izpack.panels.TargetPanel id="UNKNOWN (com.izforge.izpack.panels.TargetPanel)">
+<installpath>E:\Sage\SafeX3\Safe X3 Console</installpath>
+</com.izforge.izpack.panels.TargetPanel>
+<com.izforge.izpack.panels.PacksPanel id="UNKNOWN (com.izforge.izpack.panels.PacksPanel)">
+<pack index="0" name="Sage EM Management Console" selected="true"/>
+</com.izforge.izpack.panels.PacksPanel>
+<com.izforge.izpack.panels.SummaryPanel id="UNKNOWN (com.izforge.izpack.panels.SummaryPanel)"/>
+<com.izforge.izpack.panels.InstallPanel id="UNKNOWN (com.izforge.izpack.panels.InstallPanel)"/>
+<com.izforge.izpack.panels.ProcessPanel id="UNKNOWN (com.izforge.izpack.panels.ProcessPanel)"/>
+<com.izforge.izpack.panels.ShortcutPanel id="UNKNOWN (com.izforge.izpack.panels.ShortcutPanel)">
+<programGroup name="Sage"/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="Console de configuration Sage EM" encoding="" group="false" icon="" iconIndex="0" initialState="1" mimetype="" name="Console de configuration Sage EM" target="E:\Sage\SafeX3\Safe X3 Console\Console.exe" terminal="" terminalOptions="" tryexec="" type="3" url="" usertype="0" workingDirectory="E:\Sage\SafeX3\Safe X3 Console"/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="Console de configuration Sage EM" encoding="" group="true" icon="" iconIndex="0" initialState="1" mimetype="" name="Console de configuration Sage EM" target="E:\Sage\SafeX3\Safe X3 Console\Console.exe" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory="E:\Sage\SafeX3\Safe X3 Console"/>
+</com.izforge.izpack.panels.ShortcutPanel>
+<com.izforge.izpack.panels.FinishPanel id="UNKNOWN (com.izforge.izpack.panels.FinishPanel)"/>
+</AutomatedInstallation>

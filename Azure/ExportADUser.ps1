@@ -1,0 +1,1 @@
+Get-AzureADUser | Select-Object City, Country, Department, DisplayName, Fax, FirstName, GivenName, MobilePhone, Office, PasswordNeverExpires, PhoneNumber, PostalCode, SignInName, State, StreetAddress, Title, UserPrincipalName | Export-Csv $CSV -Encoding UTF8

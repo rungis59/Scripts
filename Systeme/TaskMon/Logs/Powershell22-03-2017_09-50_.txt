@@ -1,0 +1,30 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20170322095011
+Username: AUTOTRANS\administrateur
+RunAs User: AUTOTRANS\administrateur
+Machine: AUT-SRV-DB2008 (Microsoft Windows NT 6.1.7601 Service Pack 1)
+Host Application: powershell C:\TaskMon\Task-Monitor.ps1
+Process ID: 5008
+PSVersion: 5.0.10586.117
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0.10586.117
+BuildVersion: 10.0.10586.117
+CLRVersion: 4.0.30319.36373
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\Logs\Powershell22-03-2017_09-50_.txt
+
+
+    Directory: C:\TaskMon\Logs
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       22/03/2017     09:50              0 emailcheck22-03-2017_.txt
+No task failed in last hour for server 127.0.0.1
+**********************
+Windows PowerShell transcript end
+End time: 20170322095011
+**********************

@@ -1,0 +1,6 @@
+
+#ne pas faire
+find /hana/log/backup* -mtime +2 -exec rm {} \;
+#find /log/hana/NDB/HDB00/backup/log/* -mtime +2 -exec rm {} \;
+#find /hana/data/shared/NDB/HDB00/backup/log/* -mtime +2 -exec rm {} \;
+

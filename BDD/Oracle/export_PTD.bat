@@ -1,0 +1,1 @@
+exp ptd/snartotua@PTD file=d:\ora_bkp\attsav.dmp owner=ptd log=d:\ora_bkp\attsav.log consistent=y

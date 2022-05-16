@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="fra">
+<com.izforge.izpack.panels.HelloPanel id="UNKNOWN (com.izforge.izpack.panels.HelloPanel)"/>
+<com.izforge.izpack.panels.InfoPanel id="UNKNOWN (com.izforge.izpack.panels.InfoPanel)"/>
+<com.izforge.izpack.panels.LicencePanel id="UNKNOWN (com.izforge.izpack.panels.LicencePanel)"/>
+<com.izforge.izpack.panels.InstallationTypePanel id="UNKNOWN (com.izforge.izpack.panels.InstallationTypePanel)">
+<MODIFY.IZPACK.INSTALL>false</MODIFY.IZPACK.INSTALL>
+</com.izforge.izpack.panels.InstallationTypePanel>
+<com.izforge.izpack.panels.InstallTypePanel id="UNKNOWN (com.izforge.izpack.panels.InstallTypePanel)">
+<MODIFY.IZPACK.INSTALL>false</MODIFY.IZPACK.INSTALL>
+<installpath>e:\Sage\ElasticSearch_for_Syracuse</installpath>
+</com.izforge.izpack.panels.InstallTypePanel>
+<com.izforge.izpack.panels.TargetPanel id="UNKNOWN (com.izforge.izpack.panels.TargetPanel)">
+<installpath>e:\Sage\ElasticSearch_for_Syracuse</installpath>
+</com.izforge.izpack.panels.TargetPanel>
+<com.izforge.izpack.panels.JDKPathPanel id="UNKNOWN (com.izforge.izpack.panels.JDKPathPanel)">
+<JDKPath>E:\Java\jdk1.8.0_172</JDKPath>
+</com.izforge.izpack.panels.JDKPathPanel>
+<com.izforge.izpack.panels.UserInputPanel id="UNKNOWN (com.izforge.izpack.panels.UserInputPanel)">
+<userInput>
+<entry key="elasticsearch.service.creation" value="true"/>
+<entry key="elasticsearch.cluster.name" value="elasticsearch-server-x3v12"/>
+<entry key="elasticsearch.node.name" value="server-x3v12-node-0"/>
+<entry key="elasticsearch.service.httpport" value="9200"/>
+<entry key="elasticsearch.dir.dbpath" value="e:\Sage\ElasticSearch_for_Syracuse\data"/>
+<entry key="elasticsearch.service.nodeport" value="9300"/>
+<entry key="elasticsearch.dir.configpath" value="e:\Sage\ElasticSearch_for_Syracuse\config"/>
+<entry key="elasticsearch.dir.pluginspath" value="e:\Sage\ElasticSearch_for_Syracuse\plugins"/>
+<entry key="elasticsearch.dir.workpath" value="e:\Sage\ElasticSearch_for_Syracuse\work"/>
+<entry key="elasticsearch.dir.logpath" value="e:\Sage\ElasticSearch_for_Syracuse\logs"/>
+</userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+<com.izforge.izpack.panels.PacksPanel id="UNKNOWN (com.izforge.izpack.panels.PacksPanel)">
+<pack index="0" name="Base files" selected="true"/>
+<pack index="1" name="Configuration files" selected="true"/>
+<pack index="2" name="Windows Control files" selected="true"/>
+<pack index="3" name="Documentation files" selected="true"/>
+</com.izforge.izpack.panels.PacksPanel>
+<com.izforge.izpack.panels.SummaryPanel id="UNKNOWN (com.izforge.izpack.panels.SummaryPanel)"/>
+<com.izforge.izpack.panels.InstallPanel id="UNKNOWN (com.izforge.izpack.panels.InstallPanel)"/>
+<com.izforge.izpack.panels.ProcessPanel id="UNKNOWN (com.izforge.izpack.panels.ProcessPanel)"/>
+<com.izforge.izpack.panels.ShortcutPanel id="UNKNOWN (com.izforge.izpack.panels.ShortcutPanel)">
+<programGroup name="Sage Syracuse/ElasticSearch for Syracuse - server-x3v12-node-0"/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="Ouvre le navigateur sur le site internet de la documentation ElasticSearch" encoding="" group="true" icon="e:\Sage\ElasticSearch_for_Syracuse\docs\elasticsearch.ico" iconIndex="0" initialState="1" mimetype="" name="Accueuil de la documentation ElasticSearch online" target="e:\Sage\ElasticSearch_for_Syracuse\docs\ElasticSearch Guide.url" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="Ouvre le navigateur sur le site internet des tutoriels ElasticSearch" encoding="" group="true" icon="e:\Sage\ElasticSearch_for_Syracuse\docs\elasticsearch.ico" iconIndex="0" initialState="1" mimetype="" name="Tutoriels ElasticSearch online" target="e:\Sage\ElasticSearch_for_Syracuse\docs\ElasticSearch Tutorials.url" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="Ouvre le navigateur sur le site internet de ElasticSearch" encoding="" group="true" icon="e:\Sage\ElasticSearch_for_Syracuse\docs\elasticsearch.ico" iconIndex="0" initialState="1" mimetype="" name="Site web ElasticSearch" target="e:\Sage\ElasticSearch_for_Syracuse\docs\ElasticSearch Home.url" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="//MS/${PROCRUN_SERVICE}" createForAll="false" description="Lance le moniteur de service ElasticSearch" encoding="" group="true" icon="" iconIndex="0" initialState="1" mimetype="" name="Moniteur du service ElasticSearch" target="e:\Sage\ElasticSearch_for_Syracuse\ElasticSearchw.exe" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="Démarre ElasticSearch dans une fenêtre de commandes" encoding="" group="true" icon="" iconIndex="0" initialState="1" mimetype="" name="Démarre ElasticSearch dans une fenêtre de commandes" target="e:\Sage\ElasticSearch_for_Syracuse\manual-start.cmd" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="Démarre ElasticSearch en tant que service" encoding="" group="true" icon="" iconIndex="0" initialState="1" mimetype="" name="Démarre ElasticSearch en tant que service" target="e:\Sage\ElasticSearch_for_Syracuse\servicestart.cmd" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="Arrête le service ElasticSearch" encoding="" group="true" icon="" iconIndex="0" initialState="1" mimetype="" name="Arrête le service ElasticSearch" target="e:\Sage\ElasticSearch_for_Syracuse\servicestop.cmd" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+<shortcut KdeSubstUID="false" categories="" commandLine="" createForAll="false" description="Edition du fichier de configuration elasticsearch.yml" encoding="" group="true" icon="" iconIndex="0" initialState="1" mimetype="" name="Edition du fichier de configuration" target="e:\Sage\ElasticSearch_for_Syracuse\config\elasticsearch.yml" terminal="" terminalOptions="" tryexec="" type="1" url="" usertype="0" workingDirectory=""/>
+</com.izforge.izpack.panels.ShortcutPanel>
+<com.izforge.izpack.panels.FinishPanel id="UNKNOWN (com.izforge.izpack.panels.FinishPanel)"/>
+</AutomatedInstallation>

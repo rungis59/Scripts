@@ -1,0 +1,7 @@
+netsh advfirewall firewall set rule group="File and Printer Sharing" new enable=Yes
+
+New-Item -Name 'Sources' -Path 'D:\' -ItemType directory
+
+New-SmbShare -Name 'Sources' -Path 'D:\Sources' -FolderEnumerationMode AccessBased
+
+Grant-SmbShareAccess -Name Logs -AccountName corp\Admins -AccessRight Change -Force

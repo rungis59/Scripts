@@ -1,0 +1,7 @@
+db.getCollectionNames()
+
+db.getCollection('User').find({"authentication":"ldap"})
+
+-- Retourne uniquement le statut du serveur batch:
+
+db.getCollection('BatchServer').find({}, {status:1, _id:0})

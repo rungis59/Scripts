@@ -1,0 +1,7 @@
+mongo mongodb://localhost:27017/admin?authSource=admin --username root
+
+
+-- Le tlsCertificateSelector se trouve dans le fichier conf de mongodb
+
+.\mongo.exe --host EC2PKARFOURX3M1 --port 27017 --tls --tlsCertificateSelector thumbprint=291e200ce0d858a8e7a4c6cdd11b1d1cb5161264 --tlsCAFile D:\SageX3\MongoDB\certs\ca.cacrt 
+use syracuse
