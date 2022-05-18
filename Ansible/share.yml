@@ -12,6 +12,7 @@
         description: Critical backup files
         path: C:\shares\backup
         full: devops
+        read: Domain Users
         state: present
 
 - name: File is backed up from win2

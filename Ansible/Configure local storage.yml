@@ -1,0 +1,59 @@
+---
+- name: Configure local storage
+  hosts: win1.example.com
+
+  tasks:
+    - name: Disk facts are populated
+      win_disk_facts:
+
+    - name: Second disk extracted as standalone fact
+      set_fact:
+        second_disk: "{{ ansible_facts['disks'] | json_query('[?number==`1`]') }}"
+
+    - name: Second disk size printed
+      debug:
+        var: second_disk[0]['size']
+
+    - name: Initialize second disk if required
+      win_shell: "Initialize-Disk -Number 1"
+      when: second_disk[0]['guid'] is none
+
+    - name: Partition is created on second disk
+      win_partition:
+        disk_number: 1
+        drive_letter: F
+        partition_size: 1 GiB
+      register: partition_task
+
+    - name: New partition is formatted
+      win_format:
+        drive_letter: F
+        file_system: NTFS
+        new_label: data
+        full: true
+      when: partition_task['changed']
+
+    - name: Share folder is created
+      win_file:
+        path: F:\shares\forms
+        state: directory
+
+    - name: Content added to forms folder
+      win_copy:
+        content: 'All leave requests are now handled by our Intranet site: https://intranet.example.com/forms'
+        dest: F:\shares\forms\leave_requests.txt
+
+
+- name: Revert changes by storage.yml playbook
+  hosts: win1.example.com
+
+  tasks:
+    - name: Disk facts are populated
+      win_disk_facts:
+
+    - name: Partition is removed from second disk
+      win_partition:
+        disk_number: 1
+        drive_letter: F
+        state: absent
+

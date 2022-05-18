@@ -1,0 +1,10 @@
+---
+- name: MyApp ISO is mounted
+  win_disk_image:
+    image_path: C:\myapp_installer.iso
+    state: present
+  register: myapp_iso
+  
+- name: MyApp ISO drive letter is shown
+  debug:
+    msg: "MyApp ISO mounted at: {{ myapp_iso['mount_paths'][0] }}"
