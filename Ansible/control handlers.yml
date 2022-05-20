@@ -1,6 +1,6 @@
 ---
 - name: Control review lab
-  hosts: all
+  hosts: win*.example.com
 
   tasks:
 

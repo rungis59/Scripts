@@ -1,0 +1,37 @@
+---
+- name: Testing block, rescue and always
+  hosts: all
+
+  tasks:
+    - name: Block, Rescue and Always
+      block:
+      # Ansible starts by running these tasks...
+        - name: Installing Windows Updates
+          win_updates:
+            category_names:
+              - CriticalUpdates
+              - SecurityUpdates
+            state: installed
+            reboot: true
+            reboot_timeout: 600
+          register: update_result
+          failed_when:
+            - update_result.failed_update_count is defined
+            - update_result.failed_update_count > 0
+
+      rescue:
+      # ... these tasks only run if the tasks in the block fail.
+        - name: Showing up a failure message
+          debug:
+            msg: The Critical and Security Updates has failed.
+
+      always:
+      # However, these tasks always run
+        - name: Updating mandatory ServicePacks and FeaturePacks
+          win_updates:
+            category_names:
+              - ServicePacks
+              - FeaturePacks
+            state: installed
+            reboot: true
+            reboot_timeout: 600
