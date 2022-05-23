@@ -1,7 +1,7 @@
 Prérequis:
 
 - Windows server 2019 installé
-- ansible installé sur une VM Linux ou sur Cygwin
+- Ansible installé sur une VM Linux ou sur Cygwin
 
 Install via Cygwin:
 
