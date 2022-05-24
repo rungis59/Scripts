@@ -1,0 +1,5 @@
+ansible_connection=ssh
+ansible_ssh_user=ansible
+ansible_ssh_pass=secret_password
+ansible_python_interpreter='/usr/bin/env python3'
+ansible_become_method=sudo

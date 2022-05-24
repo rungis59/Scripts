@@ -1,0 +1,25 @@
+[runtime]
+X3-1 ansible_host=192.168.255.86
+
+[edition]
+X3-2 ansible_host=192.168.255.87
+
+[application]
+X3-1 ansible_host=192.168.255.86
+
+[mongodb]
+X3-3 ansible_host=192.168.255.88
+
+[elasticsearch]
+X3-2 ansible_host=192.168.255.87
+
+[syracuse]
+X3-3 ansible_host=192.168.255.88
+
+[windows:children]
+runtime
+edition
+application
+mongodb
+elasticsearch
+syracuse
