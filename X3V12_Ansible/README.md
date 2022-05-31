@@ -45,6 +45,17 @@ ansible_password: XXXXX
 > sudo ansible-inventory --list --vault-id dev@prompt 
 > sudo ansible windows -m win_ping --vault-id dev@prompt
 
+! 5. Téléchargement des scripts
+
+> mkdir git && cd git
+> git init
+> git remote add -f origin https://github.com/rungis59/Scripts.git
+> git sparse-checkout init
+> git sparse-checkout set "X3V12_Ansible/"
+> git pull origin main
+> cd X3V12_Ansible/
+
+
 
 
 ```
