@@ -55,7 +55,9 @@ ansible_password: XXXXX
 > git pull origin main
 > cd X3V12_Ansible/
 
+! 6. Lancement des playbooks
 
+> sudo ansible-playbook playbook01.yml --vault-id dev@prompt
 
 
 ```

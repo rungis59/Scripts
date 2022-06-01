@@ -1,6 +1,6 @@
 ---
 - name: Installation X3V12
-  hosts: all
+  hosts: X3-1
   roles:
-    - role: X3V12_Ansible
+    - role: X3V12
 
