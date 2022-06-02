@@ -3,21 +3,20 @@
 ! 1. Prérequis
 
 Windows server 2019 installé
-Ansible installé sur une VM Linux, sur WSL ou sur Cygwin. 
+Ansible installé sur une VM Linux ou sur WSL 
 
 Install sous Linux: suivre cette procédure https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-rhel-centos-or-fedora
-Install via WSL (Windows Subsystem for Linux): files/Ansible_WSL.ps1
-Install via Cygwin: files/Ansible_Cygwin.ps1
+Install via WSL (Windows Subsystem for Linux): roles/X3V12/files/Ansible_WSL.ps1
 
 ! 2. Préparation
 
-Lancer le script files/configureRemotingForAnsible.ps1 -EnableCredSSP sur les hôtes Windows gérés et redémarrer
+Lancer le script roles/X3V12/files/configureRemotingForAnsible.ps1 -EnableCredSSP sur les hôtes Windows gérés et redémarrer
 
 ! 3. Construction de l'inventaire
 
 Personnaliser les adresses IP des hôtes gérés dans le fichier /etc/ansible/hosts 
 
-Exemple disponible dans files/hosts
+Exemple disponible dans roles/X3V12/files/hosts
 
 ! 4. Configuration des variables
 
@@ -29,7 +28,7 @@ Ce compte doit être admin sur tous les hôtes gérés :
 > sudo mkdir /etc/ansible/group_vars/windows
 > sudo nano /etc/ansible/group_vars/windows/vars.yml
 
-Exemple disponible dans files/windows.yml
+Exemple disponible dans roles/X3V12/files/windows.yml
 
 -- b. Personnaliser la variable ansible_password avec le mot de passe du compte de service 
 

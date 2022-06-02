@@ -15,3 +15,9 @@ sudo apt install ansible -y
 
 sudo apt install python3-pip -y
 sudo pip install "pywinrm[credssp]" 
+
+sudo vi /etc/ansible/ansible.cfg
+
+# Ajouter en fin de fichier le bloc ci-dessous:
+[defaults]
+callbacks_enabled = profile_tasks
