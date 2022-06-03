@@ -14,3 +14,4 @@
 - name: Download and install Zulu JRE 8
   include_role:
     name: ansible-role-java
+
