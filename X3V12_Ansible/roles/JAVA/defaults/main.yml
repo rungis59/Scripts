@@ -8,7 +8,7 @@
 #  - alibaba_dragonwell (8 only)
 #  - sapmachine
 #  - Amazon Corretto (supported only 8/11)
-java_distribution: openjdk
+java_distribution: zulu
 
 # OpenJDK tarball supported only jdk
 # Oracle java supported jre/server-jre/jdk
@@ -17,7 +17,7 @@ java_distribution: openjdk
 # Alibaba Dragonwell supported jdk only
 # Amazon Corretto 8 supported jdk/jre, jre only for Windows and Amazon Linux2
 # Amazon Corretto 11 supported only jdk
-java_package: jdk
+java_package: jre
 
 # AdoptOpenJDK Implementation (hotspot/openj9)
 adoptopenjdk_impl: hotspot
@@ -25,7 +25,7 @@ adoptopenjdk_impl: hotspot
 # OpenJDK Redhat: 8 (packages) / 11 (package for centos7, tarball for all other) / 12 (tarball)
 # OpenJDK Debian: 8 (packages) / 11 (package for ubuntu18, tarball for all other) / 12 (tarball)
 # Oracle java: 8 (jre/server-jre/jdk) / 11 (jdk)
-java_major_version: 12
+java_major_version: 8
 java_minor_version: '*'
 java_product_id: '{{ java_product_id_ver[java_major_version | int] }}'
 
@@ -44,7 +44,7 @@ java_tarball_install: >-
   {{ transport != 'repositories' }}
 java_binary_type: >-
   {{ java_tarball_install | ternary('tarball', 'package') }}
-transport: fallback
+transport: chocolatey
 # available are:
 # - "web" Fetching artifact from custom web uri (not supporting idempotent operation)
 # - "s3" Fetching artifact from s3 bucket
