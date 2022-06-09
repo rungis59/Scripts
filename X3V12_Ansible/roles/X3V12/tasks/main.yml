@@ -2,6 +2,6 @@
 - name: Download Sources
   include_tasks: download.yml
 
-- name: install prerequis et outils
+- name: Install prerequis et outils
   include_tasks: prerequisites.yml
 
