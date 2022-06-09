@@ -3,7 +3,7 @@
   win_get_url:
     url: http://193.178.211.127/kardol-inge/RCA/x3-{{ X3_version }}.iso
     dest: '%userprofile%\Downloads\x3-{{ X3_version }}.iso'
-    # Calculate checksum: sha256sum x3-{{ X3_version }}.iso
+    # Calculate checksum: sha256sum x3-12.0.30.iso
     checksum: 63a470eb7d28cde7d94b51211c3a3ef5f6fef2378bcec1278787e978f0d926d2
     checksum_algorithm: sha256
     force: no
@@ -17,7 +17,7 @@
     force: no
   when: inventory_hostname in groups["application"]
 
-- name: Download and install Zulu JRE 8
+- name: Download and install Zulu 8
   include_role:
     name: JAVA
 

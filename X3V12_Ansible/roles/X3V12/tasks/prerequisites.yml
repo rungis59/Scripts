@@ -1,5 +1,8 @@
 ---
 - name: Installation Google chrome
   win_chocolatey:
-    name: "googlechrome"
+    name: "{{ item }}"
     state: present
+  loop:
+        - googlechrome
+        - notepadplusplus
