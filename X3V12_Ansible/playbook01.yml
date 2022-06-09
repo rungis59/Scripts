@@ -1,6 +1,6 @@
 ---
 - name: Installation X3V12
-  hosts: X3-1
+  hosts: all
   roles:
     - role: X3V12
 

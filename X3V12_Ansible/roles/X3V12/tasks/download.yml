@@ -10,8 +10,9 @@
     url: http://193.178.211.127/kardol-inge/RCA/x3-seed-12.0.30.iso
     dest: '%userprofile%\Downloads\x3-seed-12.0.30.iso'
     force: no
+  when: inventory_hostname in groups["application"]
 
 - name: Download and install Zulu JRE 8
   include_role:
-    name: ansible-role-java
+    name: JAVA
 
