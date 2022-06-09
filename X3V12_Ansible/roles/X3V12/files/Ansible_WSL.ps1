@@ -21,3 +21,4 @@ sudo vi /etc/ansible/ansible.cfg
 # Ajouter en fin de fichier le bloc ci-dessous:
 [defaults]
 callbacks_enabled = profile_tasks
+log_path = /var/log/ansible/logfile

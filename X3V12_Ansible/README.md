@@ -56,7 +56,7 @@ ansible_password: XXXXX
 
 ! 6. Lancement des playbooks
 
-> sudo ansible-playbook playbook01.yml --vault-id dev@prompt
+> sudo ansible-playbook -v playbook01.yml --vault-id dev@prompt
 
 
 ```
