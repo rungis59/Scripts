@@ -1,6 +1,9 @@
 ---
-- name: install chrome
+- name: Chocolatey is installed
+  win_chocolatey:
+    name: chocolatey
+    state: present
+- name: Installation Google chrome
   win_chocolatey:
     name: "googlechrome"
     state: present
-
