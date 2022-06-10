@@ -9,12 +9,7 @@
         members: "{{ ansible_user }}"
         state: present
       register: result
-      #failed_when: result.rc != 0 and result.rc != 6
-
-    - name: Montre la variable result
-      debug:
-        var: result
 
   roles:
     - role: X3V12
-      when: result.rc != 0 and result.rc != 6
+      when: result.failed = false
