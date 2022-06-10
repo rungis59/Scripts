@@ -1,4 +1,4 @@
-ansible_user: labrca\SageService
+ansible_user: SageService@labrca.fr
 ansible_password: "{{ ansible_password }}"
 ansible_port: 5986
 ansible_connection: winrm
