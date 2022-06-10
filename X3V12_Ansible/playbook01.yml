@@ -2,12 +2,5 @@
 - name: Installation X3V12
   hosts: all
   
-  pre_tasks:  
-    - name: Vérifie si le compte de service est admin local
-      win_group_membership:
-        name: Administrateurs
-        members: "{{ ansible_user }}"
-        state: present
-
   roles:
     - role: X3V12

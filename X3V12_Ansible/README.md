@@ -20,7 +20,7 @@ Exemple disponible dans roles/X3V12/files/hosts
 
 ! 4. Configuration des variables
 
--- a. Personnaliser la variable ansible_user avec le compte qui exécutera les différentes commandes ansible dans le fichier /etc/ansible/group_vars/windows/vars.yml
+-- a. Personnaliser la variable ansible_user avec le compte qui exécutera les différents playbooks dans le fichier /etc/ansible/group_vars/windows/vars.yml
 
 Ce compte doit être admin sur tous les hôtes gérés :
 > Add-LocalGroupMember -Group "Administrateurs" -Member "SageService@labrca.fr"
