@@ -8,8 +8,6 @@
         name: Administrateurs
         members: "{{ ansible_user }}"
         state: present
-      register: result
 
   roles:
     - role: X3V12
-      when: result.failed = false
