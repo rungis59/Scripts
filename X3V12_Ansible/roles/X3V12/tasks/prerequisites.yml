@@ -12,3 +12,24 @@
     name: robo3t
     state: present
   when: inventory_hostname in groups["mongodb"]
+
+- name: Règle de parefeu SageX3 activée
+  win_firewall_rule:
+    name: SageX3
+    localport: "{{ x3_ports }}"
+    action: allow
+    direction: in
+    protocol: tcp
+    state: present
+    enabled: yes
+
+- name: Règle de parefeu SQL activée
+  win_firewall_rule:
+    name: SQL
+    localport: 1434
+    action: allow
+    direction: in
+    protocol: udp
+    state: present
+    enabled: yes
+
