@@ -1,5 +1,5 @@
 ---
-- name: Download Sources
+- name: Download des sources
   include_tasks: download.yml
 
 - name: Install prerequis et outils

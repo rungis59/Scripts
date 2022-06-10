@@ -6,3 +6,9 @@
   loop:
         - googlechrome
         - notepadplusplus
+
+- name: Installation robo3t
+  win_chocolatey:
+    name: robo3t
+    state: present
+  when: inventory_hostname in groups["mongodb"]
