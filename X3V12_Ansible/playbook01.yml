@@ -3,21 +3,24 @@
   hosts: all
   
   pre_tasks:  
-    
-    block:
-      - win_group_membership:
-          name: Administrateurs
-          members: "{{ ansible_user }}"
-          state: present
-        register: result
-        failed_when: result.rc != 0 and result.rc != 6
+    - name: Exécution pre tasks
+      block:
+        - name: Vérifie si le compte de service est admin local
+          win_group_membership:
+            name: Administrateurs
+            members: "{{ ansible_user }}"
+            state: present
+          register: result
+          failed_when: result.rc != 0 and result.rc != 6
 
-      - debug:
-          var: result
+        - name: Montre la variable result
+          debug:
+            var: result
 
-    rescue:
-      debug:
-        msg: Le compte de service {{ ansible_user }} n'est pas administrateur
+      rescue:
+        - name: Affichage de l'erreur
+          debug:
+            msg: Le compte de service {{ ansible_user }} n'est pas administrateur
 
   roles:
     - role: X3V12
