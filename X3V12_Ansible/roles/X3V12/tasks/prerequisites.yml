@@ -16,12 +16,14 @@
 - name: Règle de parefeu SageX3 activée
   win_firewall_rule:
     name: SageX3
-    localport: "{{ x3_ports }}"
+    localport: "{{ item }}"
     action: allow
     direction: in
     protocol: tcp
     state: present
     enabled: yes
+  loop:
+    "{{ x3_ports }}"
 
 - name: Règle de parefeu SQL activée
   win_firewall_rule:
