@@ -26,9 +26,9 @@ sysmon_config_url: 'https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-con
 print_server: no
 
 # Region Settings
-region_location: 176
-region_language: 'nl-NL'
-region_unicode_language: 'nl-NL'
+region_location: 84
+region_language: 'fr-FR'
+region_unicode_language: 'fr-FR'
 
 # Timezone to be configured
-timezone: 'W. Europe Standard Time'
+timezone: 'Romance Standard Time'

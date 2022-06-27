@@ -33,3 +33,7 @@
     state: present
     enabled: yes
 
+- name: Optimisation & Configuration Windows
+  include_role:
+    name: WINDOWS
+

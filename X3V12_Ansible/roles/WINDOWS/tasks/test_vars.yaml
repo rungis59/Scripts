@@ -2,7 +2,7 @@
 - name: Test OS type and version
   assert:
     that:
-      - ansible_os_name == "Microsoft Windows Server 2019 Standard"
+      - ansible_os_name == "Microsoft Windows Server 2019 Standard" or ansible_os_name == "Microsoft Windows Server 2019 Datacenter"
     fail_msg: "This role is only tested on Windows Server 2019"
 
 - name: Test default variables

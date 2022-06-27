@@ -7,17 +7,17 @@
 - name: Install Windows Updates
   include_tasks: windows_updates.yaml
 
-# Include tasks
-- name: Include Powersshell DSC Modules
+# Include Powershell DSC Modules
+- name: Include Powershell DSC Modules
   include_tasks: powershelldsc.yaml
 
 # Include Pagefile settings
-- name: Include Pagefile settings
-  include_tasks: pagefile.yaml
+#- name: Include Pagefile settings
+#  include_tasks: pagefile.yaml
 
 # Include Set Windows Hostname
-- name: Include Set Hostname
-  include_tasks: hostname.yaml
+#- name: Include Set Hostname
+#  include_tasks: hostname.yaml
 
 # Include Power Settings
 - name: Include Power Settings

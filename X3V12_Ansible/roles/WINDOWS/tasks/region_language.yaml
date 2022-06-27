@@ -14,7 +14,7 @@
   when: region_result.restart_required
 
 # Set the timezone
-- name: Ensure the timezone is set to W. Europe Standard Time
+- name: Ensure the timezone is set to Romance Standard Time
   ansible.windows.win_dsc:
     resource_name: TimeZone
     IsSingleInstance: 'Yes'

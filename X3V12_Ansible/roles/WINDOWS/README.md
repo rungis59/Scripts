@@ -16,6 +16,17 @@
 ```bash
 ansible-galaxy install -r requirements.yaml
 ```
+## ComputerManagementDsc
+
+https://github.com/dsccommunity/ComputerManagementDsc/wiki/
+
+## NetworkingDsc
+
+https://github.com/dsccommunity/NetworkingDsc/wiki
+
+## StorageDsc
+
+https://github.com/dsccommunity/StorageDsc/wiki
 
 ## Variables
 | Name | Type |Description | Default | 
