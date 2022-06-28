@@ -12,4 +12,4 @@
     state: stopped
   when: 
     - print_spooler.exists == true
-    - print_server|bool == false
+    - inventory_hostname not in groups["edition"]
