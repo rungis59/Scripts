@@ -5,3 +5,4 @@
     category_names: '*'
     reboot: yes
     state: installed
+    log_path: C:\Windows\Temp\Windows_update.log

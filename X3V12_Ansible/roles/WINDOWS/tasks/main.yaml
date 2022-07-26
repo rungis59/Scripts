@@ -32,7 +32,7 @@
   include_tasks: network_settings.yaml
 
 # Include Choco Packages
-- name: Include Install choco packages
+- name: Include Install Sysmon package
   include_tasks: choco_packages.yaml
 
 # Include Configure Sysmon
