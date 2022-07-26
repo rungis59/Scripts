@@ -19,13 +19,13 @@
 #- name: Include Set Hostname
 #  include_tasks: hostname.yaml
 
-# Include Power Settings
-- name: Include Power Settings
-  include_tasks: power_settings.yaml
-
 # Include Region and Language settings
 - name: Include Region and Language settings
   include_tasks: region_language.yaml
+  
+# Include Power Settings
+- name: Include Power Settings
+  include_tasks: power_settings.yaml
 
 # Include Network Settings
 - name: Include general network settings

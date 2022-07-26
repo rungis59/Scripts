@@ -22,3 +22,5 @@ sudo vi /etc/ansible/ansible.cfg
 [defaults]
 callbacks_enabled = profile_tasks
 log_path = /var/log/ansible/logfile
+
+# Le rootfs est stocké dans : C:\Users\Administrateur\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs

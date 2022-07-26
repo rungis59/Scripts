@@ -7,7 +7,7 @@ remote_desktop: yes
 pagefile_size: "{{ ansible_memtotal_mb }}"
 
 # Powerplan name defults to High Performance
-power_plan_name: high performance
+power_plan_name: Performances élevées
 
 # CD-ROM Drive letter defaults to Z
 cdrom_drive_letter: Z

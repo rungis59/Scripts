@@ -1,7 +1,7 @@
 ---
 
 # Set the correct region and language
-- name: Ensure the region format is set do Dutch
+- name: Ensure the region format is set to French
   community.windows.win_region:
     format: '{{ region_language }}'
     copy_settings: yes
