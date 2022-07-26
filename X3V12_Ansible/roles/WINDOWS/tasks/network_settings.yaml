@@ -18,6 +18,7 @@
 - name: Configure Windows Proxy Settings
   ansible.windows.win_dsc:
     resource_name: ProxySettings
+    Target: 'LocalMachine'
     Ensure: 'Present'
     EnableAutoDetection: False
     EnableAutoConfiguration: False
