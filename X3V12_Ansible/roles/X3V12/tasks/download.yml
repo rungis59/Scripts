@@ -15,7 +15,7 @@
 
 - name: Download ISO SEED LP {{ X3_version }}
   win_get_url:
-    url: http://files.kardol.fr/x3-seed-{{ X3_version }}.iso
+    url: https://files.kardol.fr/x3-seed-{{ X3_version }}.iso
     dest: '{{ staging_directory }}\x3-seed-{{ X3_version }}.iso'
     checksum: 9d6ead684f85a61b26b577f49e40a6477f2b3b3ed2a1f6c06b8521d55c0f5cc9
     checksum_algorithm: sha256
