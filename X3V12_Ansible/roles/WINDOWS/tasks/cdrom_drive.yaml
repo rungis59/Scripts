@@ -7,3 +7,4 @@
     DriveLetter: '{{ cdrom_drive_letter }}'
     Ensure: 'Present'
   when: cdrom_drive|bool == true
+  ignore_errors: true
