@@ -1,3 +1,5 @@
 ---
 X3_version: 12.0.30
 
+# A directory for storing files needed during the configuration
+staging_directory: 'C:\Install'
