@@ -2,7 +2,10 @@
 
 - name: Install all updates without a scheduled task
   ansible.windows.win_updates:
-    category_names: '*'
+    category_names: 
+      - SecurityUpdates
+      - CriticalUpdates
+      - UpdateRollups
     reboot: yes
     state: installed
     log_path: C:\Windows\Temp\Windows_update.log
