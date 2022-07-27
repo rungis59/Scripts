@@ -6,7 +6,7 @@
 
 - name: Download ISO X3 LP {{ X3_version }}
   win_get_url:
-    url: http://185.57.15.2/x3-{{ X3_version }}.iso
+    url: https://185.57.15.2/x3-{{ X3_version }}.iso
     dest: '{{ staging_directory }}\x3-{{ X3_version }}.iso'
     # Calculate checksum: sha256sum x3-12.0.30.iso
     checksum: 63a470eb7d28cde7d94b51211c3a3ef5f6fef2378bcec1278787e978f0d926d2
@@ -15,7 +15,7 @@
 
 - name: Download ISO SEED LP {{ X3_version }}
   win_get_url:
-    url: http://185.57.15.2/x3-seed-{{ X3_version }}.iso
+    url: https://185.57.15.2/x3-seed-{{ X3_version }}.iso
     dest: '{{ staging_directory }}\x3-seed-{{ X3_version }}.iso'
     checksum: 9d6ead684f85a61b26b577f49e40a6477f2b3b3ed2a1f6c06b8521d55c0f5cc9
     checksum_algorithm: sha256
