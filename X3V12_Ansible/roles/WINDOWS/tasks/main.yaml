@@ -51,6 +51,10 @@
 - name: Include Set CD-ROM Drive letter
   include_tasks: cdrom_drive.yaml
 
+# Configure local storage
+- name: Configure local storage
+  include_tasks: storage.yaml
+
 #- name: Include Storage Sense
 #  include_tasks: storage_sense.yaml
 

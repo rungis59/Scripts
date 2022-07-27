@@ -1,0 +1,27 @@
+---
+- name: Disk facts are populated
+  community.windows.win_disk_facts:
+
+- name: Print out disks! 
+  community.windows.win_initialize_disk:
+    disk_number: "{{ disk.number }}"
+  loop: "{{ ansible_facts.disks }}"
+  loop_control:
+    loop_var: disk
+  when: ansible_disks[disk_number].guid is none
+
+- name: Partition is created on second disk
+  win_partition:
+    disk_number: "{{ disk.number }}"
+    drive_letter: F
+    partition_size: -1
+  when: ansible_disks[disk_number].guid is none
+  register: partition_task
+
+- name: New partition is formatted
+  win_format:
+    drive_letter: F
+    file_system: NTFS
+    new_label: data
+    full: true
+  when: partition_task['changed']
