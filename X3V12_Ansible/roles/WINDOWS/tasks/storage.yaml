@@ -2,17 +2,14 @@
 - name: Disk facts are populated
   community.windows.win_disk_facts:
 
-- name: Ansible facts disks printed
-  debug:
-    var: "{{ ansible_facts.disks }}"
-
 - name: Print out disks! 
   community.windows.win_initialize_disk:
     disk_number: "{{ disk.number }}"
+    online: yes
   loop: "{{ ansible_facts.disks }}"
   loop_control:
     loop_var: disk
-  when: ansible_disks[disk_number].guid is none
+  when: ansible_disks[disk_number].operational_status == "Offline"
 
 #- name: Partition is created on second disk
 #  win_partition:
