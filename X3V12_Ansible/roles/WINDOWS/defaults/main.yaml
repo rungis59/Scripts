@@ -27,3 +27,6 @@ region_unicode_language: 'fr-FR'
 
 # Timezone to be configured
 timezone: 'Romance Standard Time'
+
+#Storage task
+diskNB: diskoffline['ansible_disks']['number']
