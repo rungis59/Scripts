@@ -9,7 +9,7 @@
     
 - name: debug
   debug:
-  var: diskNB
+    var: diskNB
 
 - name: intitialize disk
   community.windows.win_initialize_disk:
