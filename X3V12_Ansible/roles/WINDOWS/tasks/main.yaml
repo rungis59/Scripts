@@ -55,13 +55,17 @@
 - name: Configure disks
   include_tasks: storage.yaml
 
-- name: Configure partitions
+- name: Detect disks without any partitions
   win_disk_facts:
     filter: 
       - win32_disk_drive
       - partitions
-  include_tasks: storage2.yaml
   loop: "{{ ansible_facts['disks'] | json_query('[?win32_disk_drive.partitions == `0`]') }}"
+  register: disks_without_partition
+
+- name: Configure partitions 
+  include_tasks: storage2.yaml
+  loop: "{{ disks_without_partition }}"
 
 #- name: Include Storage Sense
 #  include_tasks: storage_sense.yaml
