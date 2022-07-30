@@ -4,7 +4,7 @@
   
   tasks:
     - name: Configure disks
-      include_tasks: roles\WINDOWS\tasks\storage.yaml
+      include_tasks: roles/WINDOWS/tasks/storage.yaml
 
     - name: Detect disks without any partitions
       win_disk_facts:
@@ -15,5 +15,5 @@
       register: disks_without_partition
 
     - name: Configure partitions 
-      include_tasks: roles\WINDOWS\tasks\storage2.yaml
+      include_tasks: roles/WINDOWS/tasks/storage2.yaml
       loop: "{{ disks_without_partition }}"
