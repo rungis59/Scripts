@@ -1,0 +1,21 @@
+---
+- name: Disk facts are populated
+  win_disk_facts:
+    filter: 
+      - win32_disk_drive
+      - partitions
+        
+- name: Partition creation
+  win_partition:
+    disk_number: "{{ item.number }}"
+    drive_letter: auto
+    partition_size: -1
+    register: partition_task
+
+- name: Partition is formatted
+  win_format:
+    path: "{{ item.path }}"
+    file_system: NTFS
+    allocation_unit_size: 4096
+  when: partition_task['changed']
+    

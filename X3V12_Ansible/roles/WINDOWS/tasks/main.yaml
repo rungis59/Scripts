@@ -52,8 +52,12 @@
   include_tasks: cdrom_drive.yaml
 
 # Configure local storage
-- name: Configure local storage
+- name: Configure disks
   include_tasks: storage.yaml
+
+- name: Configure partitions
+  include_tasks: storage2.yaml
+  loop: "{{ ansible_facts['disks'] | json_query('[?win32_disk_drive.partitions == `0`]') }}"
 
 #- name: Include Storage Sense
 #  include_tasks: storage_sense.yaml

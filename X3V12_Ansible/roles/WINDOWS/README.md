@@ -47,14 +47,6 @@ https://github.com/dsccommunity/StorageDsc/wiki
 ## Microsoft Language codes etc
 https://docs.microsoft.com/en-us/cpp/c-runtime-library/language-strings?view=msvc-160
 
-## Structure
-Information : https://stackoverflow.com/questions/55773505/where-to-place-requirements-yml-for-ansible-and-use-it-to-resolve-dependencies
-
-## Hardening (WIP)
-Integrating CIS with the help of:
-https://github.com/0x6d69636b/windows_hardening
-
-There are some exclusions needed to keep WinRM and a Remote Session working.
 
 ### Path: Computer Configuration/Administrative Templates/Windows Components/Windows Remote Management (WinRM)/WinRM Service
 - Allow remote server management through WinRM -> Enabled
@@ -67,26 +59,10 @@ There are some exclusions needed to keep WinRM and a Remote Session working.
 
 Needed for elevated permissions and for example the installation of Microsoft Exchange and or Microsoft SQL Server
 
-### roles\requirements.yaml
-
-```yaml
----    
-- src: https://github.com/edwarddijk/ansible-windows-server.git
-  scm: git
-  version: master
-  name: windowsserver
-```
-
-```bash
-ansible-galaxy install -r roles/requirements.yaml -p ./roles/
-```
-
 ## Configuration Items
 
 - Install Windows Updates
 - Download Powershell DSC Modules
-- Set Pagefile
-- Set Hostname
 - Set Power Settings
 - Set Region and Language options
 - Set General Network Settings
@@ -96,4 +72,3 @@ ansible-galaxy install -r roles/requirements.yaml -p ./roles/
 - Configure Microsoft Sysmon with a (xml)Profile
 - Disable Server Manager Scheduled Task
 - Change the CD-ROM Drive Letter
-- (WIP) Storage Sense Settings?
