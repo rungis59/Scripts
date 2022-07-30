@@ -1,10 +1,5 @@
 ---
 
-- name: Ensure "{{ staging_directory }}" exists
-  ansible.windows.win_file:
-    path: '{{ staging_directory }}'
-    state: directory
-
 - name: Download SwiftOnSecurity Sysmon configuration
   ansible.windows.win_get_url:
     url: '{{ sysmon_config_url }}'

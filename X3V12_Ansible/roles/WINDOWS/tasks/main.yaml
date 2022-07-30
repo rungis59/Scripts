@@ -56,6 +56,10 @@
   include_tasks: storage.yaml
 
 - name: Configure partitions
+  win_disk_facts:
+    filter: 
+      - win32_disk_drive
+      - partitions
   include_tasks: storage2.yaml
   loop: "{{ ansible_facts['disks'] | json_query('[?win32_disk_drive.partitions == `0`]') }}"
 
