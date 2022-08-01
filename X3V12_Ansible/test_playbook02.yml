@@ -6,18 +6,20 @@
     - name: Configure disks
       include_tasks: roles/WINDOWS/tasks/storage.yaml
 
-    - name: Detect disks without any partitions
+    - name: win_disk_facts
       win_disk_facts:
         filter: 
           - win32_disk_drive
           - partitions
-      loop: "{{ ansible_facts['disks'] | json_query('[?win32_disk_drive.partitions == `0`]') }}"
-      register: disks_without_partition
+
+    - name: Detect disks without any partitions
+      set_fact:
+        no_part: "{{ ansible_facts['disks'] | json_query('[?win32_disk_drive.partitions == `0`]') }}"
 
     - name: Debug ansible_facts json query
       debug:
-        var: disks_without_partition
+        var: no_part
 
     - name: Configure partitions 
       include_tasks: roles/WINDOWS/tasks/storage2.yaml
-      loop: "{{ disks_without_partition }}"
+      loop: "{{ no_part }}"
