@@ -14,6 +14,11 @@
       loop: "{{ ansible_facts['disks'] | json_query('[?win32_disk_drive.partitions == `0`]') }}"
       register: disks_without_partition
 
+    - name: Debug ansible_facts json query
+      debug:
+       var: 
+        - disks_without_partition
+
     - name: Configure partitions 
       include_tasks: roles/WINDOWS/tasks/storage2.yaml
       loop: "{{ disks_without_partition }}"
